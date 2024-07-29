@@ -80,7 +80,7 @@ body {
 }
 
     .portfolio ul {
-        width: 90%;
+        width: 80%;
         display: flex;
         flex-wrap: wrap;
         justify-content:last baseline; /* Center items */
@@ -90,12 +90,11 @@ body {
 
     .portfolio li {
         list-style: none;
-        width: calc(33.333% - 20px); /* Adjust width for three items per row */
+        width: calc(33.333% - 100px); /* Adjust width for three items per row */
         height: auto;
-        margin: 10px; /* Add margin for spacing */
-        padding: 10px;
+        margin: 50px; /* Add margin for spacing */
+        padding: 30px;
         box-sizing: border-box; /* Include padding and border in width */
-        border-radius: 0 0 50px 50px;
         background-color: #2e2e2e;
         color: white;
         transition: transform 0.3s ease; /* Smooth transition effect */
