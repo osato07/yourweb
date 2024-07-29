@@ -17,17 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
     nameElement.addEventListener('mouseleave', function () {
         tooltip.style.display = 'none';
     });
+
+    // var profileIcon = document.getElementById('li');
+    // profileIcon.addEventListener('dblclick', function () {
+    //     this.style.display = 'none';
+    // });
+    
 });
 
-// document.addEventListener('load', function () {
-//     const loading = document.getElementById('loading');
-
-//     loading.style.display = 'none';
-// });
 
 window.onload = function() {
     const spinner = document.getElementById('loading');
-   
-    // Add .loaded to .loading
     spinner.classList.add('loaded');
-  }
+}

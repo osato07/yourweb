@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>touch-device-css</title>
+    <link rel="stylesheet" href="touch.css">
+</head>
+<div id="tooltip"></div>
+
+<body>
+    <div class="top" id="top">
+        <div class="header" id="header"></div>
+        <div class="icon" id="icon"></div>
+    </div>
+    <div class="bottom" id="bottom">
+        <div class="description" id="description"></div>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const elements = document.querySelectorAll('.header, .icon, .description');
+    const tooltip = document.getElementById('tooltip');
+
+    elements.forEach(element => {
+        element.addEventListener('mouseenter', function (e) {
+            tooltip.style.display = 'block';
+            tooltip.style.left = e.pageX + 10 + 'px';  // カーソルの右に少しオフセット
+            tooltip.style.top = e.pageY + 10 + 'px';   // カーソルの下に少しオフセット
+            tooltip.textContent = element.id + ": " + element.textContent;  // idとtextContentを表示
+        });
+
+        element.addEventListener('mousemove', function (e) {
+            tooltip.style.left = e.pageX + 10 + 'px';
+            tooltip.style.top = e.pageY + 10 + 'px';
+        });
+
+        element.addEventListener('mouseleave', function () {
+            tooltip.style.display = 'none';
+        });
+    });
+});
+
+</script>
+</html>

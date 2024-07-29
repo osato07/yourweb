@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fffffc;
+    align-items: center;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6e6e6;
+    position: relative;
+    z-index: 1; /* 最前面のグループ */
+}
+    .header {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        background-color: #818181;
+        position: relative;
+        z-index: 2; /* 最も前面に */
+    }
+    .icon {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        z-index: 1;
+        background-color: #565656;
+        position: relative;
+        z-index: 3; /* 最も前面に */
+    }  
+
+.bottom {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d5d5d5;
+    position: relative;
+    z-index: 1; /* 最前面のグループ */
+
+}
+    .description {
+        width: 80%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #818181;
+        position: relative;
+        z-index: 2; /* 最前面より少し背面 */
+    }
+
+div {
+    animation: ease;
+    transition: 0.3s;
+}
+
+/* :hover .bottom {
+    background-color: #19b38c;
+} */
+.description:hover {
+    background-color: #19b38c;
+}
+.bottom:hover {
+    background-color: #16896c;
+}
+.header:hover {
+    background-color: #19b38c;
+}
+.icon:hover {
+    background-color: #19b38c;
+}
+.top:hover {
+    background-color: #16896c;
+}
+
+#tooltip {
+    position: absolute;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 6;
+}
